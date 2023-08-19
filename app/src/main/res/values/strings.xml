@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Little Lemon</string>
+    <string name="app_name">LittleLemon</string>
+    <string name="little_lemon_sp">littleLemonSP</string>
 </resources>
