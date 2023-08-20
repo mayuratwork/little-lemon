@@ -47,6 +47,7 @@ class MainActivity : ComponentActivity() {
         mContext = this
         setContent {
             LittleLemonTheme {
+<<<<<<< HEAD
                 // add databaseMenuItems code here
                 val databaseMenuItems = database.menuItemDao().getAll().observeAsState()
 
@@ -105,6 +106,15 @@ class MainActivity : ComponentActivity() {
 //
 //                    MenuItemsList(items = menuItems ?: emptyList())
 
+=======
+                val databaseMenuItems = database.menuItemDao().getAll().observeAsState()
+                val orderMenuItems = remember { mutableStateOf(false) }
+
+                val menuItems = if (orderMenuItems.value)
+                    databaseMenuItems.value?.sortedBy { it.title } else databaseMenuItems.value
+
+                Column {
+>>>>>>> 276736469eb81f2cbb8bf158c5913074e151e15f
                     MyNavigation(menuItems)
                 }
             }

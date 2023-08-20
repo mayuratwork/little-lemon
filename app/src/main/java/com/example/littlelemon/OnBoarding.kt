@@ -179,6 +179,7 @@ fun OnBoarding(navController: NavController) {
             Text(text = "Register")
         }
     }
+<<<<<<< HEAD
 }
 
 private fun isRegistrationValid(): Boolean {
@@ -200,3 +201,6 @@ private fun isRegistrationValid(): Boolean {
     }
 }*/
 
+=======
+}
+>>>>>>> 276736469eb81f2cbb8bf158c5913074e151e15f
