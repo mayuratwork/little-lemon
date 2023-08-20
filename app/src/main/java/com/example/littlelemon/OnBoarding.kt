@@ -180,23 +180,3 @@ fun OnBoarding(navController: NavController) {
         }
     }
 }
-
-private fun isRegistrationValid(): Boolean {
-    return true
-}
-
-/*override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContent {
-        LittleLemonTheme {
-            Surface(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .fillMaxHeight()
-            ) {
-                OnBoardingInit()
-            }
-        }
-    }
-}*/
-

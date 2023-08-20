@@ -22,6 +22,7 @@ import androidx.compose.material.TextField
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.rounded.Face
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -32,6 +33,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -51,31 +53,28 @@ import com.example.littlelemon.ui.theme.Yellow
 fun Home(navController: NavController? = null, menuItems: List<MenuItemRoom>? = null) {
     Column(modifier = Modifier.background(color = Color.White)) {
 
-        Image(
-            painter = painterResource(id = R.drawable.logo),
-            contentDescription = "logo",
-            modifier = Modifier
-                .padding(start = 100.dp, end = 100.dp, top = 18.dp, bottom = 18.dp)
-                .clickable {
-                    navController?.navigate(Profile.route)
-                }
-        )
+        Box {
+            Image(
+                painter = painterResource(id = R.drawable.logo),
+                contentDescription = "logo",
+                modifier = Modifier.padding(start = 100.dp,
+                    end = 100.dp, top = 18.dp, bottom = 18.dp)
+            )
 
-        HeroSection(menuItems)
-        // add Button code here
-//        Button(
-//            modifier = Modifier.padding(18.dp),
-//            colors = ButtonDefaults.buttonColors(backgroundColor = Yellow,
-//                contentColor = Gray),
-//
-//            onClick = {
-////                lifecycleScope.launch {
-////                    orderMenuItems.value = true
-////                }
-//            }
-//        ) {
-//            Text(text = "Tap to order by name")
-//        }
+            Icon(
+                Icons.Rounded.Face,
+                contentDescription = stringResource(id = R.string.app_name),
+                modifier = Modifier
+                    .align(Alignment.CenterEnd)
+                    .padding(end = 18.dp)
+                    .clickable {
+                        navController?.navigate(Profile.route)
+                    },
+                tint = Gray
+            )
+        }
+
+        HomeScreen(menuItems)
     }
 }
 
@@ -190,7 +189,7 @@ private fun setCategoryValue(category: MutableState<String>, categoryName: Strin
 }
 
 @Composable
-fun HeroSection(menuItems: List<MenuItemRoom>?) {
+fun HomeScreen(menuItems: List<MenuItemRoom>?) {
     val searchPhrase = remember { mutableStateOf("") }
     val category = remember { mutableStateOf("") }
 

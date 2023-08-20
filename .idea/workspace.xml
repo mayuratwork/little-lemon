@@ -139,7 +139,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/example/littlelemon/MainActivity.kt</url>
-          <line>133</line>
+          <line>82</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
