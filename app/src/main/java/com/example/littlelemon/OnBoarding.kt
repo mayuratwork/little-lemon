@@ -179,28 +179,4 @@ fun OnBoarding(navController: NavController) {
             Text(text = "Register")
         }
     }
-<<<<<<< HEAD
 }
-
-private fun isRegistrationValid(): Boolean {
-    return true
-}
-
-/*override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContent {
-        LittleLemonTheme {
-            Surface(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .fillMaxHeight()
-            ) {
-                OnBoardingInit()
-            }
-        }
-    }
-}*/
-
-=======
-}
->>>>>>> 276736469eb81f2cbb8bf158c5913074e151e15f

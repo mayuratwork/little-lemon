@@ -22,10 +22,7 @@ import androidx.compose.material.TextField
 import androidx.compose.material.TextFieldDefaults
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
-<<<<<<< HEAD
-=======
 import androidx.compose.material.icons.rounded.Face
->>>>>>> 276736469eb81f2cbb8bf158c5913074e151e15f
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -36,10 +33,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-<<<<<<< HEAD
-=======
 import androidx.compose.ui.res.stringResource
->>>>>>> 276736469eb81f2cbb8bf158c5913074e151e15f
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -59,33 +53,6 @@ import com.example.littlelemon.ui.theme.Yellow
 fun Home(navController: NavController? = null, menuItems: List<MenuItemRoom>? = null) {
     Column(modifier = Modifier.background(color = Color.White)) {
 
-<<<<<<< HEAD
-        Image(
-            painter = painterResource(id = R.drawable.logo),
-            contentDescription = "logo",
-            modifier = Modifier
-                .padding(start = 100.dp, end = 100.dp, top = 18.dp, bottom = 18.dp)
-                .clickable {
-                    navController?.navigate(Profile.route)
-                }
-        )
-
-        HeroSection(menuItems)
-        // add Button code here
-//        Button(
-//            modifier = Modifier.padding(18.dp),
-//            colors = ButtonDefaults.buttonColors(backgroundColor = Yellow,
-//                contentColor = Gray),
-//
-//            onClick = {
-////                lifecycleScope.launch {
-////                    orderMenuItems.value = true
-////                }
-//            }
-//        ) {
-//            Text(text = "Tap to order by name")
-//        }
-=======
         Box {
             Image(
                 painter = painterResource(id = R.drawable.logo),
@@ -107,8 +74,7 @@ fun Home(navController: NavController? = null, menuItems: List<MenuItemRoom>? = 
             )
         }
 
-        HomeScreen(menuItems)
->>>>>>> 276736469eb81f2cbb8bf158c5913074e151e15f
+        HeroSection(menuItems)
     }
 }
 
@@ -223,11 +189,7 @@ private fun setCategoryValue(category: MutableState<String>, categoryName: Strin
 }
 
 @Composable
-<<<<<<< HEAD
 fun HeroSection(menuItems: List<MenuItemRoom>?) {
-=======
-fun HomeScreen(menuItems: List<MenuItemRoom>?) {
->>>>>>> 276736469eb81f2cbb8bf158c5913074e151e15f
     val searchPhrase = remember { mutableStateOf("") }
     val category = remember { mutableStateOf("") }
 
